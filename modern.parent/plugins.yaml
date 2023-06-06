@@ -74,6 +74,7 @@ plugins:
 - id: kubernetes
 - id: kubernetes-client-api
 - id: kubernetes-credentials
+- id: ldap
 - id: mailer
 - id: managed-master-hibernation
 - id: mapdb-api

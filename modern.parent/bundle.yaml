@@ -5,9 +5,5 @@ version: "1"
 jcasc:
   - main.yaml
   - security.yaml
-plugins:
-  - plugins.yaml
 items:
   - items-admin.yaml
-catalog:
-  - plugin-catalog.yaml

@@ -7,8 +7,6 @@ allowCapExceptions: true
 jcascMergeStrategy: "errorOnConflict"
 jcasc:
   - main.yaml
-plugins:
-  - plugins.yaml
 items:
   - items-devTeam-X.yaml
   - items-devTeam-Y.yaml
@@ -16,3 +14,7 @@ variables:
   - variables.yaml
 rbac:
   - rbac.yaml
+plugins:
+  - plugins.yaml
+catalog:
+  - plugin-catalog.yaml

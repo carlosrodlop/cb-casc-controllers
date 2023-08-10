@@ -12,8 +12,8 @@ items:
   - items-devTeam-Y.yaml
 variables:
   - variables.yaml
-rbac:
-  - rbac.yaml
+# rbac:
+#   - rbac.yaml
 plugins:
   - plugins.yaml
 catalog:

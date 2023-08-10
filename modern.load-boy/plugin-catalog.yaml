@@ -1,8 +1,10 @@
 type: plugin-catalog
-version: '1'
+version: "1"
 name: Load Plugin Catalog
 configurations:
-- description: Exported plugins
-  includePlugins:
-    mock-load-builder:
-      version: 54.v39abc2f1e659
+  - description: Exported plugins
+    includePlugins:
+      mock-load-builder:
+        version: 54.v39abc2f1e659
+      pipeline-utility-steps:
+        version: 2.15.1.1

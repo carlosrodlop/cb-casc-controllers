@@ -9,6 +9,7 @@ plugins:
   - id: aws-java-sdk-ec2
   - id: aws-java-sdk-minimal
   - id: blueocean-commons
+  - id: bootstrap4-api
   - id: bootstrap5-api
   - id: bouncycastle-api
   - id: branch-api
@@ -23,6 +24,7 @@ plugins:
   - id: cloudbees-casc-items-api
   - id: cloudbees-casc-items-commons
   - id: cloudbees-casc-items-controller
+  - id: cloudbees-disk-usage-simple
   - id: cloudbees-folder
   - id: cloudbees-folders-plus
   - id: cloudbees-groovy-view
@@ -31,6 +33,7 @@ plugins:
   - id: cloudbees-platform-common
   - id: cloudbees-platform-data
   - id: cloudbees-plugin-usage
+  - id: cloudbees-prometheus
   - id: cloudbees-support
   - id: cloudbees-template
   - id: cloudbees-uc-data-api
@@ -71,6 +74,7 @@ plugins:
   - id: kubernetes
   - id: kubernetes-client-api
   - id: kubernetes-credentials
+  - id: ldap
   - id: mailer
   - id: managed-master-hibernation
   - id: mapdb-api

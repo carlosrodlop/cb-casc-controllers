@@ -8,3 +8,7 @@ configurations:
         version: 54.v39abc2f1e659
       pipeline-utility-steps:
         version: 2.15.1.1
+      cloudbees-disk-usage-simple:
+        version: 178.v1a_4d2f6359a_8
+      cloudbees-prometheus:
+        version: "1.0"

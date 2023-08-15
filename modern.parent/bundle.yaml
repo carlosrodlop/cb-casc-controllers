@@ -7,3 +7,7 @@ jcasc:
   - security.yaml
 items:
   - items-admin.yaml
+plugins:
+  - plugins.yaml
+catalog:
+  - plugin-catalog.yaml

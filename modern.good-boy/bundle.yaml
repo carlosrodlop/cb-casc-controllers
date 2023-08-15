@@ -10,9 +10,7 @@ jcasc:
 items:
   - items-devTeam-X.yaml
   - items-devTeam-Y.yaml
-# rbac:
-#   - rbac.yaml
+rbac:
+  - rbac.yaml
 plugins:
   - plugins.yaml
-catalog:
-  - plugin-catalog.yaml

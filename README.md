@@ -5,3 +5,5 @@
 Repository for [Configuration as Code (CasC) for Controllers](https://docs.cloudbees.com/docs/cloudbees-ci/latest/casc-controller/).
 
 Plugins and plugin catalogs curated with [casc-plugin-dependency-calculation](https://github.com/kyounger/casc-plugin-dependency-calculation)
+
+Merge strategies are explained [here](https://docs.cloudbees.com/docs/cloudbees-ci/latest/casc-controller/advanced#_configuring_bundle_inheritance_with_casc)

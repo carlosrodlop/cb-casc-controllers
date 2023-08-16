@@ -9,7 +9,7 @@ jenkins:
 # Best-Practice: Enable Beekeeper
 # https://docs.cloudbees.com/docs/admin-resources/latest/plugin-management/beekeeper-upgrade-assistant
 beekeeper:
-  enabled: false
+  enabled: true
   securityWarnings:
     enabledForCore: true
     enabledForPlugins: true
@@ -19,7 +19,7 @@ beekeeper:
 # Best-Practice: Enable Advisor
 advisor:
   acceptToS: true
-  email: "example.user@mail.com"
+  email: ${secretAdvisorMail}
   excludedComponents:
     - "AgentsSystemConfiguration"
     - "AgentsJVMProcessSystemMetricsContents"
@@ -62,7 +62,7 @@ unclassified:
   # Best Practice: Pipeline: Use Global Libraries
   globalLibraries:
     libraries:
-      - defaultVersion: "pipelines"
+      - defaultVersion: ${sharedlib_version}
         name: "cbci.jenkins-lib"
         # Best-Practice: Adding cache for Shared Libraries
         cachingConfiguration:
@@ -71,14 +71,14 @@ unclassified:
           modernSCM:
             scm:
               git:
-                credentialsId: "GH-token"
-                remote: "https://github.com/carlosrodlop/cbci.jenkins-lib"
+                credentialsId: "GH-token" # Inherited from the Operation Center
+                remote: ${sharedlib_repo}
                 traits:
                   - "gitBranchDiscovery"
   # Best-Practice: Use WebHooks for SCM (over Polling)
   gitHubPluginConfig:
     configs:
-      - credentialsId: "GH-ST-token" # From the OC
+      - credentialsId: "GH-ST-token" # Inherited from the Operation Center
         manageHooks: true
         name: "github.com"
 kube:

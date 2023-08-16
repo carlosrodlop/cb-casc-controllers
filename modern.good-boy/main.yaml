@@ -2,9 +2,9 @@
 # https://docs.cloudbees.com/docs/admin-resources/latest/pipeline-templates-user-guide/
 globalCloudBeesPipelineTemplateCatalog:
   catalogs:
-  - branchOrTag: "pipelines"
+  - branchOrTag: ${sharedlib_version}
     scm:
       git:
-        credentialsId: "GH-token"
-        remote: "https://github.com/carlosrodlop/cbci.jenkins-lib.git"
+        credentialsId: "GH-token" # Inherited from the Operation Center
+        remote: ${sharedlib_repo}
     updateInterval: "1d"

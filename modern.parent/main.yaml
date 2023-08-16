@@ -9,14 +9,14 @@ jenkins:
 # Best-Practice: Enable Beekeeper
 # https://docs.cloudbees.com/docs/admin-resources/latest/plugin-management/beekeeper-upgrade-assistant
 beekeeper:
-  enabled: true
+  enabled: false
   securityWarnings:
     enabledForCore: true
     enabledForPlugins: true
   upgrades:
     autoDowngradePlugins: false
     autoUpgradePlugins: false
-# Best-Practice: Enable Advisor 
+# Best-Practice: Enable Advisor
 advisor:
   acceptToS: true
   email: "example.user@mail.com"
@@ -59,51 +59,51 @@ unclassified:
   provisioningLimitConfiguration:
     limit:
       nodes: 50
-  # Best Practice: Pipeline: Use Global Libraries 
+  # Best Practice: Pipeline: Use Global Libraries
   globalLibraries:
     libraries:
-    - defaultVersion: "pipelines"
-      name: "cbci.jenkins-lib"
-  # Best-Practice: Adding cache for Shared Libraries    
-      cachingConfiguration:
-        refreshTimeMinutes: 5
-      retriever:
-        modernSCM:
-          scm:
-            git:
-              credentialsId: "GH-token"
-              remote: "https://github.com/carlosrodlop/cbci.jenkins-lib"
-              traits:
-              - "gitBranchDiscovery"
-  # Best-Practice: Use WebHooks for SCM (over Polling) 
+      - defaultVersion: "pipelines"
+        name: "cbci.jenkins-lib"
+        # Best-Practice: Adding cache for Shared Libraries
+        cachingConfiguration:
+          refreshTimeMinutes: 5
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                credentialsId: "GH-token"
+                remote: "https://github.com/carlosrodlop/cbci.jenkins-lib"
+                traits:
+                  - "gitBranchDiscovery"
+  # Best-Practice: Use WebHooks for SCM (over Polling)
   gitHubPluginConfig:
     configs:
-    - credentialsId: "GH-ST-token" # From the OC
-      manageHooks: true
-      name: "github.com"
+      - credentialsId: "GH-ST-token" # From the OC
+        manageHooks: true
+        name: "github.com"
 kube:
   podTemplatesConfiguration:
     templates:
-    - containers:
-      - args: "cat"
-        command: "/bin/sh -c"
-        image: "maven:3.8.1-jdk-8"
-        livenessProbe:
-          failureThreshold: 0
-          initialDelaySeconds: 0
-          periodSeconds: 0
-          successThreshold: 0
-          timeoutSeconds: 0
+      - containers:
+          - args: "cat"
+            command: "/bin/sh -c"
+            image: "maven:3.8.1-jdk-8"
+            livenessProbe:
+              failureThreshold: 0
+              initialDelaySeconds: 0
+              periodSeconds: 0
+              successThreshold: 0
+              timeoutSeconds: 0
+            name: "maven"
+            ttyEnabled: true
+            workingDir: "/home/jenkins/agent"
+        idleMinutes: 5
+        idleMinutesStr: "5"
+        label: "maven"
         name: "maven"
-        ttyEnabled: true
-        workingDir: "/home/jenkins/agent"
-      idleMinutes: 5
-      idleMinutesStr: "5"
-      label: "maven"
-      name: "maven"
-      nodeSelector: "ci_type=build-linux"
-      nodeUsageMode: NORMAL
-      yaml: |-
+        nodeSelector: "ci_type=build-linux"
+        nodeUsageMode: NORMAL
+        yaml: |-
           apiVersion: v1
           kind: Pod
           spec:
@@ -115,5 +115,3 @@ kube:
 notificationConfiguration:
   enabled: true
   router: "operationsCenter"
-
-

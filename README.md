@@ -8,4 +8,4 @@ Plugins and plugin catalogs curated with [casc-plugin-dependency-calculation](ht
 
 Inheritance Merge strategies are explained [here](https://docs.cloudbees.com/docs/cloudbees-ci/latest/casc-controller/advanced#_configuring_bundle_inheritance_with_casc).
 
-These bundles have been validated against `CBCI_VERSION` (`CBCI_VERSION_APP`) from CloudBees CI deployed [here](https://github.com/carlosrodlop/K8s-lib/blob/main/bash/make/cb-ci/Makefile)
+These bundles have been validated against `CBCI_VERSION` (`CBCI_VERSION_APP`) from CloudBees CI deployed [here](https://github.com/carlosrodlop/K8s-lib/blob/main/bash/make/cb-ci/Makefile).

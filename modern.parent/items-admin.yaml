@@ -3,39 +3,38 @@ removeStrategy:
   items: NONE
 
 items:
-- kind: folder
-  name: admin
-  displayName: admin
-  filteredRoles:
-  - develop
-  - browse
-  items:
-  - kind: backupAndRestore
-    name: restore-builds
-    buildersList:
-    - restoreBuilder:
-        store:
-          s3Store:
-            bucketName: crodriguezlopez-v3.backups
-            sse: true
-            bucketFolder: cbci/backups/builds
-            region: us-east-1
-    concurrentBuild: false
-    displayName: restore-builds
-  - kind: backupAndRestore
-    name: restore-config
-    buildersList:
-    - restoreBuilder:
-        store:
-          s3Store:
-            bucketName: crodriguezlopez-v3.backups
-            sse: true
-            bucketFolder: cbci/backups/conf
-            region: us-east-1
-    concurrentBuild: false
-    displayName: restore-config
-  properties:
-  - envVars: {
-      }
-  - itemRestrictions:
-      filter: false
+  - kind: folder
+    name: admin
+    displayName: admin
+    filteredRoles:
+      - develop
+      - browse
+    items:
+      - kind: backupAndRestore
+        name: restore-builds
+        buildersList:
+          - restoreBuilder:
+              store:
+                s3Store:
+                  bucketName: ${backup_bucketName}
+                  sse: true
+                  bucketFolder: ${backup_folderName}/builds
+                  region: ${backup_region}
+        concurrentBuild: false
+        displayName: restore-builds
+      - kind: backupAndRestore
+        name: restore-config
+        buildersList:
+          - restoreBuilder:
+              store:
+                s3Store:
+                  bucketName: ${backup_bucketName}
+                  sse: true
+                  bucketFolder: ${backup_folderName}/conf
+                  region: ${backup_region}
+        concurrentBuild: false
+        displayName: restore-config
+    properties:
+      - envVars: {}
+      - itemRestrictions:
+          filter: false

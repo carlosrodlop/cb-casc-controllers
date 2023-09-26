@@ -9,6 +9,6 @@ items:
 plugins:
   - plugins
 catalog:
-  - plugin_catalog
+  - catalog
 variables:
   - variables

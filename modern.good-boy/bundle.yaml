@@ -6,11 +6,10 @@ parent: "modern.parent"
 allowCapExceptions: true
 jcascMergeStrategy: "errorOnConflict"
 jcasc:
-  - main.yaml
+  - jcasc
 items:
-  - items-devTeam-X.yaml
-  - items-devTeam-Y.yaml
+  - items
 rbac:
-  - rbac.yaml
+  - rbac
 plugins:
-  - plugins.yaml
+  - plugins

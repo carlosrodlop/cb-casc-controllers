@@ -3,13 +3,12 @@ id: "modern.parent"
 description: "Parent Casc Bundle"
 version: "1"
 jcasc:
-  - main.yaml
-  - security.yaml
+  - jcasc
 items:
-  - items-admin.yaml
+  - items
 plugins:
-  - plugins.yaml
+  - plugins
 catalog:
-  - plugin-catalog.yaml
+  - plugin_catalog
 variables:
-  - variables.yaml
+  - variables

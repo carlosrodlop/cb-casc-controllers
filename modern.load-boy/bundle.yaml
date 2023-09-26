@@ -6,12 +6,12 @@ parent: "modern.parent"
 allowCapExceptions: true
 jcascMergeStrategy: "errorOnConflict"
 jcasc:
-  - security.yaml
+  - jcasc
 items:
-  - items-root.yaml
+  - items
 rbac:
-  - rbac.yaml
+  - rbac
 plugins:
-  - plugins.yaml
+  - plugins
 catalog:
-  - plugin-catalog.yaml
+  - catalog

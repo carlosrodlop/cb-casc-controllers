@@ -18,5 +18,5 @@
 #  gen - is part of the non-viable 'generation-only' set of plugins
 
 plugins:
-  - id: junit # cap dep min
+  - id: junit # cap lst dep src min
   - id: mock-load-builder # 3rd lst src min gen

@@ -1,0 +1,17 @@
+apiVersion: "1"
+id: "modern.load-boy"
+description: "Casc Bundle for Load Controllers"
+version: "1"
+parent: "modern.parent"
+allowCapExceptions: true
+jcascMergeStrategy: "errorOnConflict"
+jcasc:
+  - jcasc
+items:
+  - items
+rbac:
+  - rbac
+plugins:
+  - plugins
+catalog:
+  - catalog

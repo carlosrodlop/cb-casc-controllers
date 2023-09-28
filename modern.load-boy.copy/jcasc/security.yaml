@@ -1,0 +1,4 @@
+security:
+  scriptApproval:
+    approvedSignatures:
+    - "method java.util.Random next int"

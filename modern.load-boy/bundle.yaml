@@ -13,5 +13,7 @@ rbac:
   - rbac
 plugins:
   - plugins
+#IMPORTANT: This plugin catalog contains parent's description + own description (e.g mock-load-builder)
+#Reason: Child plugin catalog overrides parent ones
 catalog:
   - catalog

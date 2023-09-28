@@ -33,7 +33,6 @@ plugins:
   - id: github-branch-source # cap lst src min gen
   - id: infradna-backup # cap lst src min gen
   - id: ldap # cap lst src min gen
-  - id: managed-master-hibernation # cap lst src min gen
   - id: maven-plugin # cap lst src min gen
   - id: momentjs # 3rd lst src min gen
   - id: operations-center-notification # cap lst src min gen

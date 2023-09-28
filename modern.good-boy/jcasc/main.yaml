@@ -8,3 +8,9 @@ globalCloudBeesPipelineTemplateCatalog:
         credentialsId: "GH-token" # Inherited from the Operation Center
         remote: ${sharedlib_repo}
     updateInterval: "1d"
+unclassified:
+  # Best-Practice: Controller Hibernation for Optimicin Resources
+  # https://docs.cloudbees.com/docs/cloudbees-ci/2.332.3.4/cloud-admin-guide/managing-masters#_hibernation_in_managed_masters
+  hibernationConfiguration:
+    enabled: true
+    gracePeriod: 1800

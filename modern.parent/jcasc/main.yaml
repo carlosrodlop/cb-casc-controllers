@@ -34,11 +34,6 @@ advisor:
     - "SlaveLaunchLogs"
   nagDisabled: false
 unclassified:
-  # Best-Practice: Controller Hibernation for Optimicin Resources
-  # https://docs.cloudbees.com/docs/cloudbees-ci/2.332.3.4/cloud-admin-guide/managing-masters#_hibernation_in_managed_masters
-  hibernationConfiguration:
-    enabled: true
-    gracePeriod: 1800
   usageStatisticsCloudBees:
     disabledJenkinsUsageStatistics: true
     usageStatisticsCollected: false

@@ -20,3 +20,4 @@
 plugins:
   - id: cloudbees-github-reporting # cap lst src min gen
   - id: cloudbees-workflow-template # cap lst src min gen
+  - id: managed-master-hibernation # cap lst src min gen

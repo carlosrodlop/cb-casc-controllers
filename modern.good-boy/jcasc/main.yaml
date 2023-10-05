@@ -14,3 +14,19 @@ unclassified:
   hibernationConfiguration:
     enabled: true
     gracePeriod: 1800
+  # Best Practice: Pipeline: Use Global Libraries
+  globalLibraries:
+    libraries:
+      - defaultVersion: ${sharedlib_version}
+        name: "cbci.jenkins-lib"
+        # Best-Practice: Adding cache for Shared Libraries. For no HA
+        cachingConfiguration:
+          refreshTimeMinutes: 5
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                credentialsId: "GH-token" # Inherited from the Operation Center
+                remote: ${sharedlib_repo}
+                traits:
+                  - "gitBranchDiscovery"

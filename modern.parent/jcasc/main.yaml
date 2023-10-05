@@ -54,22 +54,6 @@ unclassified:
   provisioningLimitConfiguration:
     limit:
       nodes: 50
-  # Best Practice: Pipeline: Use Global Libraries
-  globalLibraries:
-    libraries:
-      - defaultVersion: ${sharedlib_version}
-        name: "cbci.jenkins-lib"
-        # Best-Practice: Adding cache for Shared Libraries
-        cachingConfiguration:
-          refreshTimeMinutes: 5
-        retriever:
-          modernSCM:
-            scm:
-              git:
-                credentialsId: "GH-token" # Inherited from the Operation Center
-                remote: ${sharedlib_repo}
-                traits:
-                  - "gitBranchDiscovery"
   # Best-Practice: Use WebHooks for SCM (over Polling)
   gitHubPluginConfig:
     configs:

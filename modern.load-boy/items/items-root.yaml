@@ -23,12 +23,32 @@ items:
 
           plMockBuild (configYaml)
   - kind: pipeline
+    name: mock-loader-stress
+    properties:
+      - pipelineTriggers:
+          triggers:
+            - cron:
+                spec: H/10 * * * *
+    definition:
+      cpsFlowDefinition:
+        sandbox: true
+        script: |
+          @Library('cbci.jenkins-lib') _
+
+          def configYaml = """---
+          eventName: 'build-it'
+          timeout: 30
+          cpu: 10
+          """
+
+          plMockStress (configYaml)        
+  - kind: pipeline
     name: mock-loader-stasher-fix
     properties:
     - pipelineTriggers:
         triggers:
         - cron:
-            spec: H/3 * * * *
+            spec: H/5 * * * *
     definition:
       cpsFlowDefinition:
         sandbox: true

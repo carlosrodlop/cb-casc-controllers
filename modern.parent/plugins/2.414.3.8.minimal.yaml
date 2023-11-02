@@ -27,13 +27,15 @@ plugins:
   - id: cloudbees-groovy-view # cap lst src min gen
   - id: cloudbees-jenkins-advisor # cap lst src min gen
   - id: cloudbees-prometheus # 3rd lst src min gen
-  - id: configuration-as-code # cap lst dep src
   - id: copyartifact # cap lst src min gen
   - id: font-awesome-api # cap lst dep src min
   - id: github-branch-source # cap lst src min gen
   - id: infradna-backup # cap lst src min gen
+  - id: javadoc # cap dep min
+  - id: jsch # cap dep min
+  - id: junit # cap dep min
   - id: ldap # cap lst src min gen
-  - id: maven-plugin # cap lst src min gen
+  - id: maven-plugin # 3rd lst src min gen
   - id: momentjs # 3rd lst src min gen
   - id: operations-center-notification # cap lst src min gen
   - id: pipeline-build-step # cap lst src min gen
